@@ -1,0 +1,105 @@
+:root {
+  --fond: rgb(125, 125, 125);
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: var(--fond);
+}
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  text-align: center;
+  display: flex;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+#block {
+  display: flex;
+  margin-top: 15vh;
+}
+
+#divtitre {
+  margin-top: 20vh;
+  position: relative;
+  width: 100vw;
+  display: inline-flex;
+  border-top: solid 1px rgb(87, 0, 20);
+  border-bottom: solid 1px rgb(87, 0, 20);
+  align-items: center;
+  justify-content: space-between;
+  height: 13vw;
+  padding: 0px 3vw 0px 3vw;
+  overflow: hidden;
+}
+#background {
+  z-index: 0;
+  position: absolute;
+  width: 100vw;
+  height: 13vw;
+
+  left: 0;
+  background-image: url("https://zupimages.net/up/23/15/87dm.jpg");
+  transition: transform 0.7s ease-in-out;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#store {
+  z-index: 1;
+  position: absolute;
+  width: 100vw;
+  height: 13vw;
+  background-color: var(--fond);
+  left: 0;
+  transition: transform 0.6s ease-out;
+}
+#divtitre:hover #store {
+  transform: translateY(-100%);
+}
+#divtitre:hover #background {
+  transform: scale(1.05);
+}
+#divtitre:hover #titrecar {
+  color: rgb(255, 255, 255);
+
+}
+#divtitre:hover #pcar {
+  color: rgb(255, 255, 255);
+  -webkit-filter: drop-shadow(0px 0px 6px rgb(54, 231, 0));
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+}
+
+#titrecar {
+  color: black;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+  font-size: 5.5vw;
+  transition: color 1s ease-out, filter 1s ease;
+}
+
+#pcar {
+  will-change: transform;
+  transform: scale3d(2, 2, 1);;
+  position: static;
+  opacity: 0;
+  transition: color 0.5s linear;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+  font-size: 3vw;
+  transition: color 1s ease-out, filter 1s ease, opacity 0.4s ease-in-out, transform 0.7s ease-in-out;
+}
+#textdiv {
+  width: 100%;
+  display: flex;
+
+  align-items: baseline;
+  justify-content: space-between;
+}
